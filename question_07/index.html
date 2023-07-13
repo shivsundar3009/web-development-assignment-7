@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="form">
+        <form action="">
+            <header><h1>Publish Your Story</h1></header>
+            <input type="text" placeholder="Title" id="input">
+            <input type="url" placeholder="Enter Image URL" id="input-url">
+            <input type="text" placeholder="Enter Author Name" id="input-author-name">
+            <input type="text" placeholder="Category Eg Educational" id="Category">
+            <textarea name="" id="para" placeholder="Enter Your Story"></textarea>
+            <button id="button">Submit My Story</button>
+        </form>
+    </div>
+
+   <div class="live-preview">
+        <div class="image"></div>
+        <div class="preview-story">
+            <h3 id="show-title"></h3>
+            <p id="story"></p>
+            <div class="author-name"><p id="show-author-name"></p></div>
+        </div>
+   </div>
+   
+   <script src="./script.js"></script>
+</body>
+</html>

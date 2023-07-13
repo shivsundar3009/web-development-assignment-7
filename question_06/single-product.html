@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Product</title>
+
+    <style>
+        body{
+            background-color: rgb(75,106,209);
+        }
+        #product-details{
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Single Product Page</h1>
+
+    <div id="product-details"></div>
+
+    <script>
+        // Retrieve the selected product data from local storage
+        const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+
+        if (selectedProduct) {
+          // Create elements to display the product details
+          const productDetailsContainer = document.getElementById("product-details");
+
+          const image = document.createElement("img");
+          image.src = selectedProduct.image;
+          image.alt = selectedProduct.title;
+          productDetailsContainer.appendChild(image);
+
+          const title = document.createElement("h2");
+          title.textContent = selectedProduct.title;
+          productDetailsContainer.appendChild(title);
+
+          const price = document.createElement("div");
+          price.textContent = `$${selectedProduct.price}`;
+          productDetailsContainer.appendChild(price);
+        }
+    </script>
+</body>
+</html>
